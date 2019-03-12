@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">  
+      <h1>Aleksei Raketskii</h1>
+      <img src="photo.jpg" alt="me" height="400px">
+      <h3>Contacts</h3>
+      <ul>
+        <li><strong>Telephone and messengers(Viber, Telegram, WhatsApp): </strong><a target="_blank"  href="tel:+375295265817">+375295265817</a></li>
+        <li><strong>Email: </strong><a target="_blank"  href="mailto:raketskij@gmail.com">raketskij@gmail.com</a></li>
+        <li><strong>Facebook: </strong><a target="_blank"  href="https://www.facebook.com/profile.php?id=100015919805797">Алексей Ракетский</a></li>
+      </ul>
+      <h3>Summary</h3>
+      <p>
+        From the age of 11 I have been involved in sports programming, so I fancy about programming and everything connected with Information Technologies at all. My positive traits, such as ambitiousness, responsibility and ability to learn quickly allow me to "grasp on the fly".
+      </p>
+      <h3>Skills</h3>
+      <ul>
+        <li> 
+            Programming languages
+          <ul>
+            <li>C/C++</li>
+            <li>C#</li>
+            <li>Python</li>
+            <li>JS</li>
+          </ul>
+        </li>
+        <li>
+            Frameworks
+          <ul>
+            <li>React</li>
+            <li>Angular</li>
+          </ul>
+        </li>
+        <li>
+            Databases
+          <ul>
+            <li>Microsoft SQL Server</li>
+            <li>SQLite</li>
+          </ul>
+        </li>
+        <li>
+            VCS's
+          <ul>
+            <li>Git</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Code Samples</h3>
+      <p>Code samples from Brackets RS JS task</p>
+      <pre>
+          function check(str, bracketsConfig) {
+            let stack = [];
+            let arr = new Array(bracketsConfig.length).fill(false);
+            for (let i = 0; i < str.length; i++) {
+              for(let j = 0; j < bracketsConfig.length; j++) {
+                if (str[i] == bracketsConfig[j][0] && !(arr[j])) {
+                  stack.push(str[i]);
+                  if (bracketsConfig[j][0] == bracketsConfig[j][1]) {
+                    arr[j] = true;
+                  }
+                } else {
+                if (str[i] == bracketsConfig[j][1]) {
+                  let el = stack.pop();
+                  if (bracketsConfig[j][0] == bracketsConfig[j][1]) {
+                    arr[j] = false;
+                  }
+                  if (el != bracketsConfig[j][0]) {
+                    return false;
+                  }
+                }
+                }
+              }
+            }
+            if (stack.pop() != undefined) {
+              return false;
+            }
+            return true;
+          }
+      </pre>
+      <h3>Experience</h3>
+      <ul>
+        <li>
+            Working with telegram API and writing bots
+          <ul>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/AlcoBot">Schedule Bot</a><em>(coursework)</em></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/AlcoBot">Alcobot</a><em>(first attempt to work with Telegram API)</em></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/pypybot">Guess the melody</a></li>
+          </ul>
+        </li>
+        <li>
+            React SPA
+          <ul>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/mekler">Mekler Command</a><em>(on development stage)</em></li>
+          </ul>
+        </li>
+        <li>
+            Rolling Scopes JS tasks
+          <ul>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/warmup-1">Warm up!</a></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/love-triangle">Love Triangles</a></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/sudoku">Sudoku</a></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/advanced-zeros">Advanced Zeros</a></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/brackets">Brackets</a></li>
+            <li><a target="_blank"  href="https://github.com/snezhnyikorol/money-exchange">Money Exchange</a></li>
+          </ul>
+        </li>
+        <li>
+            Laboratory practices and olympiad tasks (C/C++) 
+        </li>
+      </ul>
+      <h3>Education</h3>
+      <h4>Belarusian National Technical University</h4>
+      <em>(2017 - 2021)</em>
+      <p>Information Technologies and Robotics Faculty</p>
+      <em>Information Systems and Technologies (1-400101-01)</em>
+      <h3>English level</h3>
+      <strong>Upper Intermediate </strong>(according to <a target="_blank"  href="Information Systems and Technologies (1-400101-01)">Streamline language school test</a>)
+    </div>  
+  </body>
+</html>
